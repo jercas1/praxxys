@@ -16,7 +16,7 @@ router.beforeEach((to, from, next) => {
     const user = JSON.parse(loggedIn);
 
     if (loggedIn && to.matched.some((route) => route.meta.auth)) {
-        if (user.admin) {
+        if (user.user.admin) {
             next();
         } else {
             if (!to.matched.some((route) => route.meta.admin)) {

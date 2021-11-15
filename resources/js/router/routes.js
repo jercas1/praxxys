@@ -11,7 +11,24 @@ const routes = [
         meta: {
             auth: true,
         },
-        children: [],
+        children: [
+            {
+                name: "Product",
+                path: "product",
+                component: () => import("../components/Product/Index"),
+                meta: {
+                    admin: true,
+                },
+            },
+            {
+                name: "Product Form",
+                path: "product-form",
+                component: () => import("../components/Product/Form"),
+                meta: {
+                    admin: true,
+                },
+            },
+        ],
     },
     {
         path: "/*",
