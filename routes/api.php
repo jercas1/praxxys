@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\AuthApiController;
+use App\Http\Controllers\ProductApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
         '/auth/get-auth',
         [AuthApiController::class, 'getAuth']
     );
+
+    // ================================================================================================
+    // Product Controller
+    // ================================================================================================
+    Route::apiResource('products', ProductApiController::class);
 });
