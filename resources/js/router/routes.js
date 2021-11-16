@@ -23,7 +23,7 @@ const routes = [
             {
                 name: "Product Form",
                 path: "product-form",
-                component: () => import("../components/Product/Form"),
+                component: () => import("../components/Product/Form/Index"),
                 meta: {
                     admin: true,
                 },

@@ -45,5 +45,15 @@ Route::middleware(['auth:sanctum'])->group(function () {
     // ================================================================================================
     // Product Controller
     // ================================================================================================
-    Route::apiResource('products', ProductApiController::class);
+    Route::apiResource('/products', ProductApiController::class)->except([
+        'update'
+    ]);
+    Route::post(
+        '/products/validate/{step}',
+        [ProductApiController::class, 'validateStepForm']
+    );
+    Route::post(
+        '/products/{product}',
+        [ProductApiController::class, 'update']
+    );
 });
