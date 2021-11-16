@@ -1,7 +1,6 @@
 <template>
   <div>
-    <!-- <div v-if="user"> -->
-    <div>
+    <div v-if="user">
       <!-- Navbar -->
       <nav
         class="
@@ -48,8 +47,8 @@
                 />
               </div>
               <div class="info">
-                Jerry
-                <span class="d-block text-muted"> jercas21@gmail.com </span>
+                {{ user.name }}
+                <span class="d-block text-muted"> {{ user.email }} </span>
               </div>
             </div>
           </router-link>
@@ -62,23 +61,23 @@
               data-accordion="false"
             >
               <li class="nav-item">
-                <router-link to="/dashboard" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt blue"></i>
-                  <p>Dashboard</p>
-                </router-link>
-              </li>
-
-              <li class="nav-item">
                 <router-link to="/product" class="nav-link">
-                  <i class="nav-icon fas fa-list orange"></i>
+                  <i class="nav-icon fas fa-archive"></i>
                   <p>Product</p>
                 </router-link>
               </li>
 
               <li class="nav-item">
                 <router-link to="/product-form" class="nav-link">
-                  <i class="nav-icon fas fa-list orange"></i>
+                  <i class="nav-icon fas fa-plus"></i>
                   <p>Create Product</p>
+                </router-link>
+              </li>
+
+              <li class="nav-item">
+                <router-link to="/video-player" class="nav-link">
+                  <i class="nav-icon fas fa-video"></i>
+                  <p>Video Player</p>
                 </router-link>
               </li>
             </ul>
@@ -88,13 +87,13 @@
       </aside>
     </div>
 
-    <div class="content-wrapper">
+    <div v-bind:class="user ? 'content-wrapper' : ''">
       <router-view class="my-2" />
     </div>
   </div>
 </template>
 <script>
-// import { mapState } from "vuex";
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -104,7 +103,7 @@ export default {
   },
 
   computed: {
-    // ...mapState("auth", ["user"]),
+    ...mapState("auth", ["user"]),
   },
 
   methods: {

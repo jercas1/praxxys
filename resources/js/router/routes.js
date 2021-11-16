@@ -28,6 +28,14 @@ const routes = [
                     admin: true,
                 },
             },
+            {
+                name: "Video Player",
+                path: "video-player",
+                component: () => import("../components/VideoPlayer/Index"),
+                meta: {
+                    admin: true,
+                },
+            },
         ],
     },
     {
