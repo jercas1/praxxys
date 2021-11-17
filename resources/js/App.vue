@@ -19,6 +19,10 @@
             ></a>
           </li>
         </ul>
+
+        <ul class="navbar-nav ml-auto">
+          <button class="btn btn-outline-dark btn-sm" @click="logout()">Logout</button>
+        </ul>
       </nav>
       <!-- /.navbar -->
 

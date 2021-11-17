@@ -10,3 +10,7 @@ Installation
 8. npm run dev
 9. php artisan serve
 10. go to http://127.0.0.1:8000/
+
+Administrator Credentials
+username/email: admin / admin@gmail.com
+password: password

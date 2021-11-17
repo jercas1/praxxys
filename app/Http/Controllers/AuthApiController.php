@@ -16,6 +16,7 @@ class AuthApiController extends Controller
 
         $user = User::withTrashed()
             ->where('email', $validated['email'])
+            ->orWhere('username', $validated['email'])
             ->first();
 
         if (!$user || !Hash::check($validated['password'], $user->password)) {
