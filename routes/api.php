@@ -27,7 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post(
     '/auth/login',
     [AuthApiController::class, 'login']
-)->middleware('throttle:5');
+);
 
 Route::middleware(['auth:sanctum'])->group(function () {
     // ================================================================================================
