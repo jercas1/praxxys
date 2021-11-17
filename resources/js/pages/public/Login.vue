@@ -45,6 +45,21 @@
             </div>
           </div>
         </div>
+
+        <div class="col">
+          <div class="card">
+            <div class="card-header text-center bg-primary border-0">
+              <h6 class="mb-0">Credentials</h6>
+            </div>
+            <div class="card-body">
+              <h6 class="mb-0">Username/Email:</h6>
+              <p><strong>admin / admin@gmail.com</strong></p>
+
+              <h6 class="mb-0">Password:</h6>
+              <p><strong>password</strong></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
