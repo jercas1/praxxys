@@ -11,6 +11,9 @@ Installation
 9. php artisan serve
 10. go to http://127.0.0.1:8000/
 
-Administrator Credentials
-username/email: admin / admin@gmail.com
-password: password
+<h6>Admin Credentials</h6>
+<h6 class="mb-0">Username/Email:</h6>
+<p><strong>admin / admin@gmail.com</strong></p>
+
+<h6 class="mb-0">Password:</h6>
+<p><strong>password</strong></p>
