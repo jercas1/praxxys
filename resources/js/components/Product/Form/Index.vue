@@ -98,7 +98,28 @@ export default {
 
             if (res.data.product.datetime) {
               const datetime = new Date(res.data.product.datetime);
-              this.step3_form.datetime = `${datetime.getFullYear()}-${datetime.getMonth() + 1}-${datetime.getDate()}T${datetime.getHours()}:${datetime.getMinutes()}`;
+
+              let month = datetime.getMonth() + 1;
+              if (month < 10) {
+                month = `0${month}`;
+              }
+
+              let date = datetime.getDate();
+              if (date < 10) {
+                date = `0${date}`;
+              }
+
+              let hours = datetime.getHours();
+              if (hours < 10) {
+                hours = `0${hours}`;
+              }
+
+              let minutes = datetime.getMinutes();
+              if (minutes < 10) {
+                minutes = `0${minutes}`;
+              }
+
+              this.step3_form.datetime = `${datetime.getFullYear()}-${month}-${date}T${hours}:${minutes}`;
             }
           }
         })
